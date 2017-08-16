@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
 const mustacheExpress = require('mustache-express');
-const data = require( src = "/Users/claudiazeledon/Documents/Daily_Projects/SupRoboHunt/data.json");
+const data = require( src = "./data.json");
+
+//Using the...absolute path on local computer works to get the data.json to show up
+// const data = require( src = "/Users/claudiazeledon/Documents/Daily_Projects/SupRoboHunt/data.json");
 
 app.engine('mustache', mustacheExpress());
 app.set('views', './views')
@@ -10,7 +13,7 @@ app.set('view engine', 'mustache')
 // app.use(express.static(__dirname + '/public/'));
 
 app.use(express.static("views"));
-//Somehow setting a static function for views folder works great when trying to get the css to show up on the web page and stylize the darn thing. 
+//Somehow setting a static function for views folder works great when trying to get the css to show up on the web page and stylize the darn thing.
 
 // app.use(express.static(__dirname + './views'));
 // app.use('/static', express.static('public'));
