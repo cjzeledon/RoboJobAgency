@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Robo Staffing Agency
+  </title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  {{#users}}
+
+    <div>
+    <img src="{{avatar}}">
+    <p class="robo_name">{{name}}</p>
+    <p class="robo_jobtitle">{{job}}</p>
+    <p class="robo_company">{{company}}</p>
+    </div>
+
+  {{/users}}
+</body>
+</html>

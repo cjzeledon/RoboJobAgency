@@ -1,0 +1,22 @@
+body{
+  width: 800px;
+  margin: 0 auto;
+}
+
+div{
+  display: inline-block;
+  border: 1px solid gray;
+  margin: 10px;
+  width: 150px;
+}
+
+.robo_name {
+  color: blue;
+  font-size: large;
+  font-weight: bold;
+  font-family: sans-serif, serif, arial;
+}
+
+.robo_jobtitle, .robo_company{
+  font-size: smaller;
+}
