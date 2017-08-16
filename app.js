@@ -8,8 +8,12 @@ app.set('views', './views')
 app.set('view engine', 'mustache')
 
 // app.use(express.static(__dirname + '/public/'));
-// app.use(express.static("views"));
-app.use(express.static(__dirname + './views'));
+
+app.use(express.static("views"));
+//This app.us to get the views folder works great when getting the css file to show on the webpage.
+
+// app.use(express.static(__dirname + './views'));
+// app.use('/static', express.static('public'));
 
 app.get('/robo/', function (req, res) {
   res.render('robo.mustache', data);
