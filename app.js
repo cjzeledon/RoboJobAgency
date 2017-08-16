@@ -4,14 +4,17 @@ const mustacheExpress = require('mustache-express');
 const data = require( src = "/Users/claudiazeledon/Documents/Daily_Projects/SupRoboHunt/data.json");
 
 app.engine('mustache', mustacheExpress());
-app.set('robots', './robots')
-app.set('robots engine', 'mustache')
+app.set('views', './views')
+app.set('view engine', 'mustache')
 
-app.use(express.static(__dirname + '/robots'));
+// app.use(express.static(__dirname + '/public/'));
+// app.use(express.static("views"));
+app.use(express.static(__dirname + './views'));
 
 app.get('/robo/', function (req, res) {
   res.render('robo.mustache', data);
 })
+
 
 app.listen(3000, function () {
   console.log('Successfully started express application!')
