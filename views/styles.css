@@ -4,14 +4,16 @@ body{
 }
 
 div{
-  display: inline-block;
+  display: inline-grid;
   border: 1px solid gray;
+  border-radius: 4px;
   margin: 10px;
-  width: 150px;
+  width: 155px;
+  padding: 5px;
 }
 
 .robo_name {
-  color: blue;
+  color: #5DADE2;
   font-size: large;
   font-weight: bold;
   font-family: sans-serif, serif, arial;
@@ -19,4 +21,6 @@ div{
 
 .robo_jobtitle, .robo_company{
   font-size: smaller;
+  font-family: arial;
+  margin: 2px;
 }
