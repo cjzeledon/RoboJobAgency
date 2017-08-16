@@ -10,7 +10,7 @@ app.set('view engine', 'mustache')
 // app.use(express.static(__dirname + '/public/'));
 
 app.use(express.static("views"));
-//This app.us to get the views folder works great when getting the css file to show on the webpage.
+//Somehow setting a static function for views folder works great when trying to get the css to show up on the web page and stylize the darn thing. 
 
 // app.use(express.static(__dirname + './views'));
 // app.use('/static', express.static('public'));
