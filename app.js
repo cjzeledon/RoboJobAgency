@@ -7,18 +7,18 @@ const data = require( src = "./data.json");
 // const data = require( src = "/Users/claudiazeledon/Documents/Daily_Projects/SupRoboHunt/data.json");
 
 app.engine('mustache', mustacheExpress());
-app.set('views', './views')
+app.set('views', './public')
 app.set('view engine', 'mustache')
 
 // app.use(express.static(__dirname + '/public/'));
 
-app.use(express.static("views"));
-//Somehow setting a static function for views folder works great when trying to get the css to show up on the web page and stylize the darn thing.
+app.use(express.static("public"));
+//Somehow setting a static function for public folder works great when trying to get the css to show up on the web page and stylize the darn thing.
 
 // app.use(express.static(__dirname + './views'));
 // app.use('/static', express.static('public'));
 
-app.get('/robo/', function (req, res) {
+app.get('/', function (req, res) {
   res.render('robo.mustache', data);
 })
 
